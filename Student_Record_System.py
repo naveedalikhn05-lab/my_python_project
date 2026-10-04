@@ -21,12 +21,19 @@ def add_student():
 
 
 def view_students():
+    print("\n--- Student Records ---")
 
-    print("\n--- Student Records---")
+    if not students:
+        print("No students found!")
+        return
 
     for student in students:
-        print("student")
-
+        print(f"Name: {student['name']}")
+        print(f"Age: {student['age']}")
+        print(f"Degree: {student['degree']}")
+        print(f"Field: {student['field']}")
+        print(f"CGPA: {student['cgpa']}")
+        print("----------------------")
 
 def search_student():
 
